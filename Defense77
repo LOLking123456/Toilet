@@ -175,12 +175,13 @@ vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosit
    end
    end})
 
-local Players = game.Players
-Players.PlayerRemoving:Connect(function(player)
   
 Tab2:CreateButton({
 	Name = "Auto Signing Units Admin",
 	Callback = function()
+
+local Players = game.Players
+Players.PlayerRemoving:Connect(function(player)
 local args = {
     [1] = ":kick "..player.Name,
     [2] = "All"
