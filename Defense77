@@ -121,46 +121,60 @@ end)
 	    end})
 
 
+Tab2:CreateLabel("Trade Macro Works On Mobile Now!")
 
-	 Tab2:CreateToggle({
-	Name = "Auto Trade Macro (NEW)",
+Tab2:CreateToggle({
+	Name = "Trade Macro (Slow)",
+	CurrentValue = false,
+	Callback = function(Value)
+	       a = Value
+        while a do task.wait(0.6)
+        pcall(function()
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+   end)
+   end
+   end})
+
+Tab2:CreateToggle({
+	Name = "Trade Macro (Normal)",
 	CurrentValue = false,
 	Callback = function(Value)
 	       a = Value
         while a do task.wait(0.3)
         pcall(function()
-local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
 
-local Player = Players.LocalPlayer
-local Button = Player.PlayerGui.Lobby.QueueFrame.Start
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
 
-local function simulateInput()
-    local position = UDim2.new(0.5, 0, 0.5, 0) -- Adjust the position as needed
-
-    if UserInputService.TouchEnabled then
-        -- Simulate touch input for mobile
-        local touchInput = Instance.new("InputObject")
-        touchInput.UserInputType = Enum.UserInputType.Touch
-        touchInput.Position = position
-
-        UserInputService.InputBegan:Fire(touchInput)
-        wait(0.1) -- Adjust the delay if necessary
-        UserInputService.InputEnded:Fire(touchInput)
-    else
-        -- Simulate mouse input for PC
-        UserInputService.InputBegan:Fire({UserInputType = Enum.UserInputType.MouseButton1, Position = position})
-        wait(0.1) -- Adjust the delay if necessary
-        UserInputService.InputEnded:Fire({UserInputType = Enum.UserInputType.MouseButton1, Position = position})
-    end
-end
-
-simulateInput()
-
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
    end)
    end
    end})
-	
+
+
+Tab2:CreateToggle({
+	Name = "Trade Macro (Fast)",
+	CurrentValue = false,
+	Callback = function(Value)
+	       a = Value
+        while a do task.wait(0.1)
+        pcall(function()
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+   end)
+   end
+   end})
+
 	Tab2:CreateButton({
 	Name = "Admin Tools",
 	Callback = function()
@@ -180,14 +194,14 @@ game.Workspace.Decoration:Destroy()
 	
 	
 	Tab2:CreateButton({
-	Name = "Remove EntryTunnel (Space To Place Troops)",
+	Name = "Remove Entry Tunnel (Space To Place Troops)",
 	Callback = function()
 game.Workspace.EntryTunnel:Destroy()
 	end})
 	
 	
 	Tab2:CreateButton({
-	Name = "Remove ToiletCity (Space To Place Troops)",
+	Name = "Remove Toilet City (Space To Place Troops)",
 	Callback = function()
 game.Workspace.Building:Destroy()
 	end})
