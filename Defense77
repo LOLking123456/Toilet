@@ -117,27 +117,27 @@ end)
  
 
 	 Tab2:CreateToggle({
-	Name = "Auto Trade Macro",
+	Name = "Best",
 	CurrentValue = false,
 	Callback = function(Value)
 	       a = Value
         while a do task.wait()
         pcall(function()
-local Player = game.Players.LocalPlayer
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local Player = Players.LocalPlayer
 local Button = Player.PlayerGui.Lobby.QueueFrame.Start
-local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
 
--- Define the function to fire signals
-local function fireSignal(signal)
-    if signal then
-        signal:Fire()
+-- Simulate a click on the button
+UserInputService.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        -- Make sure the button is valid before simulating the click
+        if Button:IsA("ImageButton") or Button:IsA("TextButton") then
+            Button:Click()
+        end
     end
-end
-
--- Loop through events and fire signals
-for _, eventName in ipairs(events) do
-    fireSignal(Button[eventName])
-end
+end)
 
    end)
    end
