@@ -123,9 +123,22 @@ end)
 	       a = Value
         while a do task.wait()
         pcall(function()
-local Button = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
+local Player = game.Players.LocalPlayer
+local Button = Player.PlayerGui.Lobby.QueueFrame.Start
 local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
-for i, v in next, events do firesignal(Button[v]) end
+
+-- Define the function to fire signals
+local function fireSignal(signal)
+    if signal then
+        signal:Fire()
+    end
+end
+
+-- Loop through events and fire signals
+for _, eventName in ipairs(events) do
+    fireSignal(Button[eventName])
+end
+
    end)
    end
    end})
