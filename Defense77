@@ -1,0 +1,1029 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/Rayfield/main/source'))()
+spawn(function()
+
+
+	setclipboard("https://link-center.net/256968/toilet-tower-def")
+	toclipboard("https://link-center.net/256968/toilet-tower-def")
+
+end)
+
+local Window = Rayfield:CreateWindow({
+   Name = "Toilet Tower Defense | Legend HandlesYT",
+   LoadingTitle = "Toilet Tower Defense",
+   LoadingSubtitle = "YT: Legend Handles",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = Hubby, -- Create a custom folder for your hub/game
+      FileName = "Big Hub1"
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "The Key Link Is Copied",
+      Subtitle = "If it didn't copy get link on right side!",
+      Note = "link-center.net/256968/toilet-tower-def",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/8S1k07y7"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab2 = Window:CreateTab("Main-Features", 4483362458) -- Title, Image
+
+
+
+
+Tab2:CreateLabel("Main")
+
+
+
+spawn(function()
+_G.loops = true
+while wait(.1) do
+if _G.loops == true then
+     
+local Button = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
+local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+for i, v in next, events do firesignal(Button[v]) end
+   
+end
+end
+end)
+
+
+spawn(function()
+_G.loops = true
+while wait(1) do
+if _G.loops == true then
+     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.4210739, 5.25753641, -162.57724, 0.930187762, -2.56666355e-10, -0.367084026, 5.16918418e-11, 1, -5.68216585e-10, 0.367084026, 5.09572884e-10, 0.930187762)
+end
+end
+end)
+
+spawn(function()
+_G.loops = true
+while wait(1) do
+if _G.loops == true then
+   
+local Button = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+for i, v in next, events do firesignal(Button[v]) end
+   
+end
+end
+end)
+
+	  Tab2:CreateButton({
+	Name = "Turn Off AutoFarm (If Don't Want Because It Auto Does It)",
+	Callback = function()
+
+	    spawn(function()
+_G.loops = false
+while wait(.1) do
+if _G.loops == true then
+     
+local Button = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
+local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+for i, v in next, events do firesignal(Button[v]) end
+   
+end
+end
+end)
+
+
+spawn(function()
+_G.loops = false
+while wait(1) do
+if _G.loops == true then
+     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.4210739, 5.25753641, -162.57724, 0.930187762, -2.56666355e-10, -0.367084026, 5.16918418e-11, 1, -5.68216585e-10, 0.367084026, 5.09572884e-10, 0.930187762)
+end
+end
+end)
+
+spawn(function()
+_G.loops = false
+while wait(1) do
+if _G.loops == true then
+   
+local Button = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+for i, v in next, events do firesignal(Button[v]) end
+   
+end
+end
+end)
+
+	    end})
+
+
+	 Tab2:CreateToggle({
+	Name = "Trade Macro Normal (WORKS FOR MOBILE)",
+	CurrentValue = false,
+	Callback = function(Value)
+	       a = Value
+        while a do task.wait(0.3)
+        pcall(function()
+local Button = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
+local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+for i, v in next, events do firesignal(Button[v]) end
+   end)
+   end
+   end})
+	
+	Tab2:CreateButton({
+	Name = "Admin Tools",
+	Callback = function()
+for i,v in pairs(game.ReplicatedStorage.AdminTools:GetDescendants()) do
+if  v:IsA("Tool") then
+
+v.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+	end})
+	
+	Tab2:CreateButton({
+	Name = "Remove Decorations (Space To Place Troops)",
+	Callback = function()
+game.Workspace.Decoration:Destroy()
+	end})
+	
+	
+	Tab2:CreateButton({
+	Name = "Remove EntryTunnel (Space To Place Troops)",
+	Callback = function()
+game.Workspace.EntryTunnel:Destroy()
+	end})
+	
+	
+	Tab2:CreateButton({
+	Name = "Remove ToiletCity (Space To Place Troops)",
+	Callback = function()
+game.Workspace.Building:Destroy()
+	end})
+	
+		Tab2:CreateButton({
+	Name = "Teleport To Trading Plaza",
+	Callback = function()
+game:GetService("TeleportService"):Teleport(14682939953, game:GetService("Players").LocalPlayer)    
+	end})
+		
+	Tab2:CreateButton({
+	Name = "Free Camera (C)",
+	Callback = function()
+
+ToggleKey = Enum.KeyCode.C
+SprintKey = Enum.KeyCode.Tab
+
+localPlayer = game.Players.LocalPlayer
+
+Camera = game.Workspace.CurrentCamera
+Mouse = localPlayer:GetMouse()
+
+UserInputService = game:GetService("UserInputService")
+
+
+movePosition = Vector2.new(0,0)
+moveDirection = Vector3.new(0,0,0)
+
+targetMovePosition = movePosition
+
+Y_Sensitivity = 300;
+X_Sensitivity = 300;
+
+lastRightButtonDown = Vector2.new(0,0)
+rightMouseButtonDown = false
+
+targetFOV = 70
+
+sprinting = false;
+sprintingSpeed = 3;
+
+keysDown = {}
+
+moveKeys = {
+[Enum.KeyCode.D] = Vector3.new(1,0,0),
+[Enum.KeyCode.A] = Vector3.new(-1,0,0),
+[Enum.KeyCode.S] = Vector3.new(0,0,1),
+[Enum.KeyCode.W] = Vector3.new(0,0,-1),
+[Enum.KeyCode.E] = Vector3.new(0,1,0),
+[Enum.KeyCode.Q] = Vector3.new(0,-1,0)
+}
+
+Tween = function(a,b,t)
+if t == 1 then
+return b
+else 
+if tonumber(a) then
+    return a * (1-t) + (b*t)
+else
+return a:Lerp(b,t);
+end
+end
+end
+
+ClampVector3 = function(x,min,max)
+
+return 
+Vector3.new(
+math.clamp(x.X,min.X,max.X),
+math.clamp(x.Y,min.Y,max.Y),
+math.clamp(x.Z,min.Z,max.Z)
+)
+
+end
+
+
+UserInputService.InputChanged:connect(function(inputObject)
+if inputObject.UserInputType == Enum.UserInputType.MouseMovement then
+movePosition = movePosition + Vector2.new(inputObject.Delta.x,inputObject.Delta.y)
+end
+end)
+
+CalculateMovement = function()
+local newMovement = Vector3.new(0,0,0)
+for i,v in pairs(keysDown) do
+newMovement = newMovement + (moveKeys[i] or Vector3.new(0,0,0))
+end
+return newMovement
+end
+
+Round = function(num, numDecimalPlaces)
+  return math.floor((num/numDecimalPlaces) + .5)*numDecimalPlaces
+end
+
+Input = function(input,gameProcessed)
+if moveKeys[input.KeyCode] then
+if input.UserInputState == Enum.UserInputState.Begin then
+keysDown[input.KeyCode] = true
+elseif input.UserInputState == Enum.UserInputState.End then
+keysDown[input.KeyCode] = nil
+end
+else
+if input.UserInputState == Enum.UserInputState.Begin then
+print(input.KeyCode)
+if input.UserInputType == Enum.UserInputType.MouseButton2 then
+rightMouseButtonDown = true
+lastRightButtonDown = Vector2.new(Mouse.X,Mouse.Y)
+UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
+elseif input.KeyCode == Enum.KeyCode.Z then
+targetFOV = 20
+elseif input.KeyCode == SprintKey then
+sprinting = true
+end
+else
+if input.UserInputType == Enum.UserInputType.MouseButton2 then
+rightMouseButtonDown = false
+UserInputService.MouseBehavior = Enum.MouseBehavior.Default
+elseif input.KeyCode == Enum.KeyCode.Z then
+targetFOV = 70
+elseif input.KeyCode == SprintKey then
+sprinting = false
+end
+end
+end
+end
+ 
+Mouse.WheelForward:connect(function()
+   Camera.CoordinateFrame = Camera.CoordinateFrame * CFrame.new(0,0,-5)
+end)
+
+Mouse.WheelBackward:connect(function()
+   Camera.CoordinateFrame = Camera.CoordinateFrame * CFrame.new(-0,0,5)
+end)
+
+UserInputService.InputBegan:connect(Input)
+UserInputService.InputEnded:connect(Input)
+
+local Toggled = false
+game:GetService("UserInputService").InputBegan:connect(function(inputObject)
+if inputObject.KeyCode == ToggleKey then
+Toggled = not Toggled
+if Toggled then
+Camera.CameraType = Enum.CameraType.Scriptable
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true 
+else
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+game.Workspace.CurrentCamera.CameraType = "Custom"
+end
+end
+end)
+
+
+game:GetService("RunService").RenderStepped:Connect(function()
+if Toggled then
+local mouseTarget = Mouse.Hit
+
+targetMovePosition = movePosition
+Camera.CoordinateFrame = CFrame.new(Camera.CoordinateFrame.p) * CFrame.fromEulerAnglesYXZ(-targetMovePosition.Y/Y_Sensitivity ,-targetMovePosition.X/X_Sensitivity, 0) * CFrame.new(CalculateMovement() * ((({[true]=sprintingSpeed})[sprinting]) or .5) )
+Camera.FieldOfView = Tween(Camera.FieldOfView,targetFOV,.5)
+if rightMouseButtonDown then
+UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
+movePosition = movePosition - (lastRightButtonDown - Vector2.new(Mouse.X,Mouse.Y))
+lastRightButtonDown = Vector2.new(Mouse.X,Mouse.Y)
+end
+end
+end)
+	end})
+	
+local Tab1 = Window:CreateTab("Player-Features", 4483362458)
+
+
+Tab1:CreateButton({
+	Name = "Noclip",
+	Callback = function()
+	 local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+		end,
+})
+
+
+Tab1:CreateButton({
+	Name = "CFrame Speed (Z)",
+	Callback = function()
+ 	repeat
+		wait()
+	until game:IsLoaded()
+	local L_134_ = game:service('Players')
+	local L_135_ = L_134_.LocalPlayer
+	repeat
+		wait()
+	until L_135_.Character
+	local L_136_ = game:service('UserInputService')
+	local L_137_ = game:service('RunService')
+	getgenv().Multiplier = 0.5
+	local L_138_ = true
+	local L_139_
+	L_136_.InputBegan:connect(function(L_140_arg0)
+		if L_140_arg0.KeyCode == Enum.KeyCode.LeftBracket then
+			Multiplier = Multiplier + 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.LeftBracket) do
+				wait()
+				Multiplier = Multiplier + 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.RightBracket then
+			Multiplier = Multiplier - 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.RightBracket) do
+				wait()
+				Multiplier = Multiplier - 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.Z then
+			L_138_ = not L_138_
+			if L_138_ == true then
+				repeat
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
+					game:GetService("RunService").Stepped:wait()
+				until L_138_ == false
+			end
+		end
+	end)
+end})
+
+
+   
+   local Slider = Tab1:CreateSlider({
+	Name = "CFrame Speed",
+	Range = {0, 10},
+	Increment = .1,
+	Suffix = "Speed",
+	CurrentValue = 0,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(s)
+ getgenv().Multiplier = s
+	end,
+})
+
+	 Tab1:CreateToggle({
+	Name = "Infinite Jump",
+	CurrentValue = false,
+	Flag = "ttfeoggle1",
+	Callback = function(state)
+	   if state then
+    _G.infinjump = true
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+    Mouse.KeyDown:connect(function(k)
+    if _G.infinjump then
+    if k:byte() == 32 then
+    Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    Humanoid:ChangeState("Jumping")
+    wait(0.1)
+    Humanoid:ChangeState("Seated")
+    end
+    end
+    end)
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+        else
+    if _G.infinjump == true then
+    _G.infinjump = false
+    else
+    _G.infinjump = true
+    end
+    end
+	end,
+})
+
+
+
+Tab1:CreateButton({
+	Name = "FPS Booster",
+	Callback = function()
+     for _,v in pairs(workspace:GetDescendants()) do
+if v.ClassName == "Part"
+or v.ClassName == "SpawnLocation"
+or v.ClassName == "WedgePart"
+or v.ClassName == "Terrain"
+or v.ClassName == "MeshPart" then
+v.Material = "Plastic"
+end
+end
+end})
+
+local Tab = Window:CreateTab("Credits", 4483362458) -- Title, Image
+
+
+Tab:CreateLabel("Credits")
+Tab:CreateButton({
+	Name = "Made By Legend HandlesYT",
+	Callback = function()
+        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3432.12598, 140.795761, 1771.28772, 0.374604106, 0, 0.92718488, 0, 1, 0, -0.92718488, 0, 0.374604106)
+	end,
+})
+
+
+   
+
+for _, v in pairs(Functions) do
+	task.spawn(v)
+endlocal Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/Rayfield/main/source'))()
+spawn(function()
+
+
+	setclipboard("https://link-center.net/256968/toilet-tower-def")
+	toclipboard("https://link-center.net/256968/toilet-tower-def")
+
+end)
+
+local Window = Rayfield:CreateWindow({
+   Name = "Toilet Tower Defense | Legend HandlesYT",
+   LoadingTitle = "Toilet Tower Defense",
+   LoadingSubtitle = "YT: Legend Handles",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = Hubby, -- Create a custom folder for your hub/game
+      FileName = "Big Hub1"
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "The Key Link Is Copied",
+      Subtitle = "If it didn't copy get link on right side!",
+      Note = "link-center.net/256968/toilet-tower-def",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/8S1k07y7"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab2 = Window:CreateTab("Main-Features", 4483362458) -- Title, Image
+
+
+
+
+Tab2:CreateLabel("Main")
+spawn(function()
+_G.loops = true
+while wait(2) do
+if _G.loops == true then
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+end
+end
+end)
+spawn(function()
+_G.loops = true
+while wait(1) do
+if _G.loops == true then
+     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(590.522888, 354.566132, 240.492172, -0.908861041, -4.85626508e-08, -0.417098999, 3.53242685e-10, 1, -1.17199271e-07, 0.417098999, -1.0666519e-07, -0.908861041)
+end
+end
+end)
+
+
+spawn(function()
+_G.loops = true
+while wait(1) do
+if _G.loops == true then
+
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+end
+end
+end)
+
+
+	 Tab2:CreateButton({
+	Name = "Turn Off AutoFarm (If Don't Want Because It Auto Does It)",
+	Callback = function()
+
+	    spawn(function()
+_G.loops = false
+while wait(.1) do
+if _G.loops == true then
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+end
+end
+end)
+
+
+spawn(function()
+_G.loops = false
+while wait(1) do
+if _G.loops == true then
+     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(590.522888, 354.566132, 240.492172, -0.908861041, -4.85626508e-08, -0.417098999, 3.53242685e-10, 1, -1.17199271e-07, 0.417098999, -1.0666519e-07, -0.908861041)
+end
+end
+end)
+
+spawn(function()
+_G.loops = false
+while wait(1) do
+if _G.loops == true then
+
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+end
+end
+end)
+
+	    end})
+
+	 Tab2:CreateButton({
+	Name = "Auto Collect Fireworks (Lobby)",
+	Callback = function()
+for i,v in pairs(workspace.Worlds.Lobby.HiddenFireworks:GetDescendants()) do 
+if v.Name == "Firework" then 
+wait(4.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+end
+end
+
+
+end})
+
+
+	 Tab2:CreateButton({
+	Name = "Auto Collect Fireworks (Trading Plaza)",
+	Callback = function()
+for i,v in pairs(workspace.Worlds.TradingPlaza.HiddenFireworks:GetDescendants()) do 
+if v.Name == "Firework" then 
+wait(4.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+end
+end
+
+
+end})
+
+ Tab2:CreateButton({
+	Name = "Auto Collect Fireworks (Matches)",
+	Callback = function()
+for i,v in pairs(workspace.HiddenFireworks:GetDescendants()) do 
+if v.Name == "Firework" then 
+wait(4.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+end
+end
+
+
+end})
+	 Tab2:CreateToggle({
+	Name = "Auto Trade Macro (FIXED)",
+	CurrentValue = false,
+	Callback = function(Value)
+	       a = Value
+        while a do task.wait(0.3)
+        pcall(function()
+
+local vim = game:GetService'VirtualInputManager'
+local x = game.Players.LocalPlayer.PlayerGui.Lobby.TradingFrame.TradeMenu.TradeActions.Accept
+
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
+vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
+   end)
+   end
+   end})
+	
+	Tab2:CreateButton({
+	Name = "Admin Tools",
+	Callback = function()
+for i,v in pairs(game.ReplicatedStorage.AdminTools:GetDescendants()) do
+if  v:IsA("Tool") then
+
+v.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+	end})
+	
+	Tab2:CreateButton({
+	Name = "Remove Decorations (Space To Place Troops)",
+	Callback = function()
+game.Workspace.Decoration:Destroy()
+	end})
+	
+	
+	Tab2:CreateButton({
+	Name = "Remove EntryTunnel (Space To Place Troops)",
+	Callback = function()
+game.Workspace.EntryTunnel:Destroy()
+	end})
+	
+	
+	Tab2:CreateButton({
+	Name = "Remove ToiletCity (Space To Place Troops)",
+	Callback = function()
+game.Workspace.Building:Destroy()
+	end})
+	
+		Tab2:CreateButton({
+	Name = "Teleport To Trading Plaza",
+	Callback = function()
+game:GetService("TeleportService"):Teleport(14682939953, game:GetService("Players").LocalPlayer)    
+	end})
+		
+	Tab2:CreateButton({
+	Name = "Free Camera (C)",
+	Callback = function()
+
+ToggleKey = Enum.KeyCode.C
+SprintKey = Enum.KeyCode.Tab
+
+localPlayer = game.Players.LocalPlayer
+
+Camera = game.Workspace.CurrentCamera
+Mouse = localPlayer:GetMouse()
+
+UserInputService = game:GetService("UserInputService")
+
+
+movePosition = Vector2.new(0,0)
+moveDirection = Vector3.new(0,0,0)
+
+targetMovePosition = movePosition
+
+Y_Sensitivity = 300;
+X_Sensitivity = 300;
+
+lastRightButtonDown = Vector2.new(0,0)
+rightMouseButtonDown = false
+
+targetFOV = 70
+
+sprinting = false;
+sprintingSpeed = 3;
+
+keysDown = {}
+
+moveKeys = {
+[Enum.KeyCode.D] = Vector3.new(1,0,0),
+[Enum.KeyCode.A] = Vector3.new(-1,0,0),
+[Enum.KeyCode.S] = Vector3.new(0,0,1),
+[Enum.KeyCode.W] = Vector3.new(0,0,-1),
+[Enum.KeyCode.E] = Vector3.new(0,1,0),
+[Enum.KeyCode.Q] = Vector3.new(0,-1,0)
+}
+
+Tween = function(a,b,t)
+if t == 1 then
+return b
+else 
+if tonumber(a) then
+    return a * (1-t) + (b*t)
+else
+return a:Lerp(b,t);
+end
+end
+end
+
+ClampVector3 = function(x,min,max)
+
+return 
+Vector3.new(
+math.clamp(x.X,min.X,max.X),
+math.clamp(x.Y,min.Y,max.Y),
+math.clamp(x.Z,min.Z,max.Z)
+)
+
+end
+
+
+UserInputService.InputChanged:connect(function(inputObject)
+if inputObject.UserInputType == Enum.UserInputType.MouseMovement then
+movePosition = movePosition + Vector2.new(inputObject.Delta.x,inputObject.Delta.y)
+end
+end)
+
+CalculateMovement = function()
+local newMovement = Vector3.new(0,0,0)
+for i,v in pairs(keysDown) do
+newMovement = newMovement + (moveKeys[i] or Vector3.new(0,0,0))
+end
+return newMovement
+end
+
+Round = function(num, numDecimalPlaces)
+  return math.floor((num/numDecimalPlaces) + .5)*numDecimalPlaces
+end
+
+Input = function(input,gameProcessed)
+if moveKeys[input.KeyCode] then
+if input.UserInputState == Enum.UserInputState.Begin then
+keysDown[input.KeyCode] = true
+elseif input.UserInputState == Enum.UserInputState.End then
+keysDown[input.KeyCode] = nil
+end
+else
+if input.UserInputState == Enum.UserInputState.Begin then
+print(input.KeyCode)
+if input.UserInputType == Enum.UserInputType.MouseButton2 then
+rightMouseButtonDown = true
+lastRightButtonDown = Vector2.new(Mouse.X,Mouse.Y)
+UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
+elseif input.KeyCode == Enum.KeyCode.Z then
+targetFOV = 20
+elseif input.KeyCode == SprintKey then
+sprinting = true
+end
+else
+if input.UserInputType == Enum.UserInputType.MouseButton2 then
+rightMouseButtonDown = false
+UserInputService.MouseBehavior = Enum.MouseBehavior.Default
+elseif input.KeyCode == Enum.KeyCode.Z then
+targetFOV = 70
+elseif input.KeyCode == SprintKey then
+sprinting = false
+end
+end
+end
+end
+ 
+Mouse.WheelForward:connect(function()
+   Camera.CoordinateFrame = Camera.CoordinateFrame * CFrame.new(0,0,-5)
+end)
+
+Mouse.WheelBackward:connect(function()
+   Camera.CoordinateFrame = Camera.CoordinateFrame * CFrame.new(-0,0,5)
+end)
+
+UserInputService.InputBegan:connect(Input)
+UserInputService.InputEnded:connect(Input)
+
+local Toggled = false
+game:GetService("UserInputService").InputBegan:connect(function(inputObject)
+if inputObject.KeyCode == ToggleKey then
+Toggled = not Toggled
+if Toggled then
+Camera.CameraType = Enum.CameraType.Scriptable
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true 
+else
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+game.Workspace.CurrentCamera.CameraType = "Custom"
+end
+end
+end)
+
+
+game:GetService("RunService").RenderStepped:Connect(function()
+if Toggled then
+local mouseTarget = Mouse.Hit
+
+targetMovePosition = movePosition
+Camera.CoordinateFrame = CFrame.new(Camera.CoordinateFrame.p) * CFrame.fromEulerAnglesYXZ(-targetMovePosition.Y/Y_Sensitivity ,-targetMovePosition.X/X_Sensitivity, 0) * CFrame.new(CalculateMovement() * ((({[true]=sprintingSpeed})[sprinting]) or .5) )
+Camera.FieldOfView = Tween(Camera.FieldOfView,targetFOV,.5)
+if rightMouseButtonDown then
+UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
+movePosition = movePosition - (lastRightButtonDown - Vector2.new(Mouse.X,Mouse.Y))
+lastRightButtonDown = Vector2.new(Mouse.X,Mouse.Y)
+end
+end
+end)
+	end})
+	
+local Tab1 = Window:CreateTab("Player-Features", 4483362458)
+
+
+Tab1:CreateButton({
+	Name = "Noclip",
+	Callback = function()
+	 local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+		end,
+})
+
+
+Tab1:CreateButton({
+	Name = "CFrame Speed (Z)",
+	Callback = function()
+ 	repeat
+		wait()
+	until game:IsLoaded()
+	local L_134_ = game:service('Players')
+	local L_135_ = L_134_.LocalPlayer
+	repeat
+		wait()
+	until L_135_.Character
+	local L_136_ = game:service('UserInputService')
+	local L_137_ = game:service('RunService')
+	getgenv().Multiplier = 0.5
+	local L_138_ = true
+	local L_139_
+	L_136_.InputBegan:connect(function(L_140_arg0)
+		if L_140_arg0.KeyCode == Enum.KeyCode.LeftBracket then
+			Multiplier = Multiplier + 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.LeftBracket) do
+				wait()
+				Multiplier = Multiplier + 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.RightBracket then
+			Multiplier = Multiplier - 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.RightBracket) do
+				wait()
+				Multiplier = Multiplier - 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.Z then
+			L_138_ = not L_138_
+			if L_138_ == true then
+				repeat
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
+					game:GetService("RunService").Stepped:wait()
+				until L_138_ == false
+			end
+		end
+	end)
+end})
+
+
+   
+   local Slider = Tab1:CreateSlider({
+	Name = "CFrame Speed",
+	Range = {0, 10},
+	Increment = .1,
+	Suffix = "Speed",
+	CurrentValue = 0,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(s)
+ getgenv().Multiplier = s
+	end,
+})
+
+	 Tab1:CreateToggle({
+	Name = "Infinite Jump",
+	CurrentValue = false,
+	Flag = "ttfeoggle1",
+	Callback = function(state)
+	   if state then
+    _G.infinjump = true
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+    Mouse.KeyDown:connect(function(k)
+    if _G.infinjump then
+    if k:byte() == 32 then
+    Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    Humanoid:ChangeState("Jumping")
+    wait(0.1)
+    Humanoid:ChangeState("Seated")
+    end
+    end
+    end)
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+        else
+    if _G.infinjump == true then
+    _G.infinjump = false
+    else
+    _G.infinjump = true
+    end
+    end
+	end,
+})
+
+
+
+Tab1:CreateButton({
+	Name = "FPS Booster",
+	Callback = function()
+     for _,v in pairs(workspace:GetDescendants()) do
+if v.ClassName == "Part"
+or v.ClassName == "SpawnLocation"
+or v.ClassName == "WedgePart"
+or v.ClassName == "Terrain"
+or v.ClassName == "MeshPart" then
+v.Material = "Plastic"
+end
+end
+end})
+
+local Tab = Window:CreateTab("Credits", 4483362458) -- Title, Image
+
+
+Tab:CreateLabel("Credits")
+Tab:CreateButton({
+	Name = "Made By Legend HandlesYT",
+	Callback = function()
+        Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3432.12598, 140.795761, 1771.28772, 0.374604106, 0, 0.92718488, 0, 1, 0, -0.92718488, 0, 0.374604106)
+	end,
+})
+
+
+   
+
+for _, v in pairs(Functions) do
+	task.spawn(v)
+end
