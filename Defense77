@@ -33,7 +33,7 @@ local Tab2 = Window:CreateTab("Main-Features", 4483362458) -- Title, Image
 
 
 
-Tab2:CreateLabel("Main")
+Tab2:CreateLabel("Main (FIXED AUTO SKIP NOT PRESSING AND TP)")
 spawn(function()
 _G.loops = true
 while wait(2) do
