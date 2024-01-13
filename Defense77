@@ -127,41 +127,6 @@ end)
 	       a = Value
         while a do task.wait(0.3)
         pcall(function()
-local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
-local VirtualInputManager = game:GetService("VirtualInputManager")
-
-local Player = Players.LocalPlayer
-local Button = Player.PlayerGui.Lobby.QueueFrame.Start
-
-local function fireEvents()
-    local events = { "Activated" }
-    for _, eventName in ipairs(events) do
-        Button[eventName]:Fire()
-    end
-end
-
-if UserInputService.TouchEnabled then
-    -- Mobile input
-    UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-        if input.UserInputType == Enum.UserInputType.Touch then
-            if Button:IsA("ImageButton") or Button:IsA("TextButton") then
-                fireEvents()
-            end
-        end
-    end)
-else
-    -- PC input
-    UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            if not gameProcessedEvent then
-                if Button:IsA("ImageButton") or Button:IsA("TextButton") then
-                    fireEvents()
-                end
-            end
-        end
-    end)
-end
 
    end)
    end
