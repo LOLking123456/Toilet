@@ -198,7 +198,11 @@ local args = {
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 end)
 end})
-
+Tab2:CreateButton({
+	Name = "Admin Commands",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end})
 	Tab2:CreateButton({
 	Name = "Admin Tools",
 	Callback = function()
