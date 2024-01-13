@@ -65,7 +65,7 @@ if _G.loops == true then
 
 
 local vim = game:GetService'VirtualInputManager'
-local x = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+local x = game.Players.LocalPlayer.PlayerGui.Match.WaveInfo.AutoSkip.OnAndOff
 
 vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
 vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
@@ -110,7 +110,7 @@ if _G.loops == true then
 
 
 local vim = game:GetService'VirtualInputManager'
-local x = game.Players.LocalPlayer.PlayerGui.Match.TopFrame.AutoSkip.OnAndOff
+local x = game.Players.LocalPlayer.PlayerGui.Match.WaveInfo.AutoSkip.OnAndOff
 
 vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,true,x,1)
 vim:SendMouseButtonEvent(x.AbsolutePosition.X+x.AbsoluteSize.X/2,x.AbsolutePosition.Y+50,0,false,x,1)
